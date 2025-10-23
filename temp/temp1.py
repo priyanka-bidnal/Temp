@@ -1,11 +1,14 @@
 temperature = float(input("Enter the temperature in °C: "))
 
 if temperature < 20:
-    print(f"Temperature: {temperature}°C")
-    print("Status: Cold")
+    status = "Cold"
 elif 20 <= temperature <= 30:
-    print(f"Temperature: {temperature}°C")
-    print("Status: Normal")
+    status = "Normal"
 else:
-    print(f"Temperature: {temperature}°C")
-    print("Status: Hot")
+    status = "Hot"
+
+fahrenheit = (temperature * 9/5) + 32
+
+print(f"Temperature: {temperature}°C")
+print(f"Status: {status}")
+print(f"Temperature in Fahrenheit: {fahrenheit}°F")
